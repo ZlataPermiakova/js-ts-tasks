@@ -1,12 +1,23 @@
-/**
- * Write a function which for every numbers (negative/positive numbers, zeros) in given array replaces:
- *  one digit numbers with number 1
- *  two digits numbers with number 2
- *  three digits numbers with number 3
- *  the rest numbers with number 4
- * @param {Array<number>} arr
- * @returns {Array<number>}
- */
 module.exports.replacement = function replacement(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    const num = arr[i];
+    const absNum = Math.abs(num);
+
+    const numStringLength = String(absNum).length;
+
+    let replacementValue;
+
+    if (numStringLength === 1) {
+      replacementValue = 1;
+    } else if (numStringLength === 2) {
+      replacementValue = 2;
+    } else if (numStringLength === 3) {
+      replacementValue = 3;
+    } else {
+      replacementValue = 4;
+    }
+    result.push(replacementValue);
+  }
+  return result;
 };

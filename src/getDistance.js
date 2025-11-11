@@ -1,11 +1,7 @@
-/**
- * Calculate the distance between two points represented on the standard Planar coordinate system
- * with precision 2 decimal places
- * Each Point represented by object contains two property (X and Y)
- * @param {Object} firstPoint
- * @param {Object} secondPoint
- * @returns {number}
- */
 module.exports.getDistance = function getDistance(firstPoint, secondPoint) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  const distanceX = secondPoint.X - firstPoint.X;
+  const distanceY = secondPoint.Y - firstPoint.Y;
+
+  const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+  return parseFloat(distance.toFixed(2));
 };
