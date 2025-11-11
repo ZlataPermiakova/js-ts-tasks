@@ -1,9 +1,9 @@
 module.exports.replacement = function replacement(arr) {
   const result = [];
+
   for (let i = 0; i < arr.length; i++) {
     const num = arr[i];
     const absNum = Math.abs(num);
-
     const numStringLength = String(absNum).length;
 
     let replacementValue;

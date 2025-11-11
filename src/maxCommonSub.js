@@ -1,5 +1,6 @@
 module.exports.maxCommonSub = function maxCommonSub(str1, str2) {
   let maximalCommonSubstring = '';
+
   if (str1.length === 0 || str2.length === 0) {
     return '';
   }
@@ -13,6 +14,5 @@ module.exports.maxCommonSub = function maxCommonSub(str1, str2) {
       }
     }
   }
-
   return maximalCommonSubstring;
 };
